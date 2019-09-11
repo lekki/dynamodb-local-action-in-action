@@ -6,6 +6,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws/external"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"log"
+	"os"
 )
 
 func main() {
@@ -37,6 +38,9 @@ func dynamoDb() *dynamodb.DynamoDB {
 }
 
 func loadBasicAwsConfig() aws.Config {
+
+	os.Setenv("AWS_REGION", "us-east-1")
+
 	cfg, err := external.LoadDefaultAWSConfig()
 	cfg.LogLevel = aws.LogDebugWithHTTPBody
 	if err != nil {
