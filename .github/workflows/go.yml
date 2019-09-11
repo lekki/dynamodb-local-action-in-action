@@ -16,7 +16,7 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
     - name: Setting up dynamodb local
-      uses: lekki/dynamodb-local-action@master
+      uses: lekki/dynamodb-local-action@v0.1
     - name: Run
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
