@@ -20,7 +20,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(res.TableNames)
+	fmt.Println(res.TableNames, len(res.TableNames))
 }
 
 func dynamodbConfig(baseConfig aws.Config) aws.Config {
