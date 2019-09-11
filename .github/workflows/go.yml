@@ -17,6 +17,9 @@ jobs:
       uses: actions/checkout@v1
     - name: Setting up dynamodb local
       uses: ./.github/actions/dynamodblocal-action
+      with:
+         host port: 8000
+         container port: 8000
     - name: Run
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

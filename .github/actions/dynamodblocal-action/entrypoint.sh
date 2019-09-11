@@ -2,6 +2,6 @@
 
 docker_run="docker run"
 
-docker_run="$docker_run -d -p 8000:8000 amazon/dynamodb-local"
+docker_run="$docker_run -d -p $INPUT_HOST_PORT:$INPUT_CONTAINER_PORT amazon/dynamodb-local"
 
 sh -c "$docker_run"
